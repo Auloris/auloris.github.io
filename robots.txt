@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: student.html
 Disallow: teacher.html
+Disallow: dashHub.htm
 Allow: index.html
 Allow: login.html
 Sitemap: https://auloris.github.io/
