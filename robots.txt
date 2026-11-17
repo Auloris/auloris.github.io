@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: student.html
+Disallow: teacher.html
+Allow: index.html
+Allow: login.html
+Sitemap: https://auloris.github.io/
