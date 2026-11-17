@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #2468ed;
+  --primary-dark: #1150cb;
+  --text: #0c204b;
+  --muted: #697995;
+  --border: #d7e0ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 35px 24px 60px;
+  font-family: "Roboto", Arial, sans-serif;
+  overflow: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top left, #d6e9ff, transparent 45%),
+    radial-gradient(ellipse at bottom right, #cce2ff, transparent 45%), #f7fbff;
+}
+
+.platform-brand {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.platform-brand h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.platform-brand h1 span {
+  color: var(--primary);
+}
+
+.platform-brand p {
+  margin: 12px 0 0;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.login-card {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  max-width: 900px;
+  height: 530px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #d8e5f6;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 22px 65px rgba(26, 78, 150, 0.13);
+}
+
+.school-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 48px;
+  color: white;
+  background: linear-gradient(145deg, #3488ed, #104098);
+}
+
+.school-banner::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 190px;
+  bottom: -115px;
+  left: -20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(-12deg);
+}
+
+.school-identity {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.school-emblem {
+  display: grid;
+  place-items: center;
+  margin: 0 auto 26px;
+  border-radius: 24px;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.school-identity h2 {
+  margin: 0;
+  font-size: clamp(46px, 5vw, 75px);
+  font-weight: 300;
+  line-height: 1;
+  font-size: large;
+}
+
+.login-panel {
+  padding: 75px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-panel h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+}
+
+.subtitle {
+  margin: 12px 0 38px;
+  text-align: center;
+  font-size: 21px;
+  color: var(--muted);
+}
+
+form label {
+  display: block;
+  margin: 0 0 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  height: 58px;
+  margin-bottom: 22px;
+  padding: 0 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 13px;
+  outline: none;
+  font: inherit;
+  font-size: 16px;
+  background: #fff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(36, 104, 237, 0.1);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 80px;
+}
+
+.password-field button {
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 13px;
+  color: white;
+  background: linear-gradient(110deg, #288ef7, #1153d7);
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    filter 0.2s,
+    transform 0.2s;
+}
+
+.submit-button:hover {
+  filter: brightness(0.94);
+}
+
+.submit-button:active {
+  transform: scale(0.99);
+}
+
+#error {
+  min-height: 20px;
+  text-align: center;
+  color: #c62828;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  .platform-brand {
+    margin-bottom: 30px;
+  }
+
+  .login-card {
+    grid-template-columns: 1fr;
+  }
+
+  .school-banner {
+    min-height: 240px;
+    padding: 30px;
+  }
+
+  .school-emblem {
+    width: 75px;
+    height: 75px;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .school-identity h2 {
+    font-size: 42px;
+  }
+
+  .login-panel {
+    padding: 42px 28px;
+  }
+}

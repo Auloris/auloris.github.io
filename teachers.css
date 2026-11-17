@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --blue: #2468ed;
+  --dark-blue: #0f3f9a;
+  --text: #17233d;
+  --muted: #718096;
+  --border: #e3eaf3;
+  --background: #f6f9fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  border-right: 1px solid var(--border);
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand b {
+  color: var(--blue);
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--blue);
+  color: white;
+}
+
+.school-name {
+  margin: 28px 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f0f5ff;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav a,
+.sidebar-bottom a {
+  display: block;
+  padding: 13px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #53627a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--blue);
+  background: #edf4ff;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 10px;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 38px 45px;
+  max-width: 1700px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.topbar h1 {
+  font-size: 29px;
+  margin: 0 0 8px;
+}
+
+.topbar p,
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.account {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 45px;
+  border-radius: 22px;
+  background: linear-gradient(110deg, #2879ed, #0d449f);
+  color: white;
+  margin-bottom: 38px;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  opacity: 0.85;
+}
+
+.welcome h2 {
+  font-size: 30px;
+  margin: 14px 0;
+}
+
+.welcome p {
+  max-width: 440px;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.welcome-art {
+  width: 145px;
+  height: 165px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 4px solid #ffffff65;
+  border-radius: 18px;
+  background: #ffffff20;
+  transform: rotate(9deg);
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0 0 8px;
+  font-size: 23px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filters input,
+.filters select {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.filters input {
+  flex: 1;
+  min-width: 0;
+}
+
+.filters select {
+  min-width: 160px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--blue);
+}
+
+.workbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.workbook-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.workbook-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px #183d7414;
+}
+
+.book-cover {
+  min-height: 180px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: var(--cover-color, #2468ed);
+}
+
+.book-cover span {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.book-cover strong {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.book-details {
+  padding: 20px;
+}
+
+.book-details h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.book-details p {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.book-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.book-actions a {
+  flex: 1;
+  padding: 12px;
+  border-radius: 9px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.view-btn {
+  background: #eef4ff;
+  color: var(--blue);
+}
+
+.download-btn {
+  background: var(--blue);
+  color: white;
+}
+
+.download-btn:hover {
+  background: var(--dark-blue);
+}
+
+.empty {
+  padding: 60px;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 1100px) {
+  .workbook-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+  }
+
+  .sidebar-bottom,
+  .school-name {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 22px 16px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .account,
+  .welcome-art {
+    display: none;
+  }
+
+  .welcome {
+    padding: 28px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .workbook-grid {
+    grid-template-columns: 1fr;
+  }
+}

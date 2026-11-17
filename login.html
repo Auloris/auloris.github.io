@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | Techwise Jam</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="login.js" defer></script>
+  </head>
+  <body>
+    <main class="login-card">
+      <section class="school-banner">
+        <div class="school-identity">
+          <div class="school-emblem">Auloris Cloud</div>
+          <h2></h2>
+        </div>
+      </section>
+
+      <section class="login-panel">
+        <h2>Auloris</h2>
+        <p class="subtitle">User Login</p>
+
+        <form id="loginForm">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter your username"
+            autocomplete="username"
+            required
+          />
+
+          <label for="password">Password</label>
+          <div class="password-field">
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+            <button
+              type="button"
+              id="togglePassword"
+              aria-label="Show password"
+            >
+              Show
+            </button>
+          </div>
+
+          <button type="submit" class="submit-button">Submit</button>
+
+          <p id="error" role="alert"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

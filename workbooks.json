@@ -1,0 +1,76 @@
+{
+  "workbooks": [
+    {
+      "title": "Level 1 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 1",
+      "file": "c1.pdf"
+    },
+    {
+      "title": "Level 2 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 2",
+      "file": "c2.pdf"
+    },
+    {
+      "title": "Level 3 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 3",
+      "file": "c3.pdf"
+    },
+    {
+      "title": "Level 4 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 4",
+      "file": "c4.pdf"
+    },
+    {
+      "title": "Level 5 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 5",
+      "file": "c5.pdf"
+    },
+    {
+      "title": "Level 6 Computer Science",
+      "subject": "Computer Science",
+      "level": "Level 6",
+      "file": "c6.pdf"
+    },
+    {
+      "title": "Level 1 Robotics",
+      "subject": "Robotics",
+      "level": "Level 1",
+      "file": "lev1rob.pdf"
+    },
+    {
+      "title": "Level 2 Robotics",
+      "subject": "Robotics",
+      "level": "Level 2",
+      "file": "lev2rob.pdf"
+    },
+    {
+      "title": "Level 3 Robotics",
+      "subject": "Robotics",
+      "level": "Level 3",
+      "file": "lev3rob.pdf"
+    },
+    {
+      "title": "Level 4 Robotics",
+      "subject": "Robotics",
+      "level": "Level 4",
+      "file": "lev4rob.pdf"
+    },
+    {
+      "title": "Level 5 Robotics",
+      "subject": "Robotics",
+      "level": "Level 5",
+      "file": "lev5rob.pdf"
+    },
+    {
+      "title": "Level 6 Robotics",
+      "subject": "Robotics",
+      "level": "Level 6",
+      "file": "lev6rob.pdf"
+    }
+  ]
+}

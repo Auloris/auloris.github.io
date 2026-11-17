@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard | Techwise Jam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="student.css" />
+    <script src="student.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">T</div>
+        <span>Techwise <strong>Jam</strong></span>
+      </div>
+
+      <nav>
+        <button class="nav-item active" data-page="overview">Overview</button>
+        <button class="nav-item" data-page="quiz">Quizzes</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p>Student Portal</p>
+        <a href="login.html" id="signOut">Sign out</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section id="overview" class="page active">
+        <header class="page-header">
+          <h1>Student Overview</h1>
+          <p>Your personal learning dashboard.</p>
+        </header>
+
+        <div class="hero">
+          <div>
+            <span class="eyebrow"> STUDENT PORTAL</span>
+            <h2>Welcome back, <span id="studentName"></span>!</h2>
+            <p>
+              Explore new challenges, test your knowledge, and keep building
+              your skills.
+            </p>
+            <br />
+            <button class="hero-button" id="startLearning" data-page="quiz">
+              Explore Quizzes
+            </button>
+          </div>
+          <div class="hero-decoration" aria-hidden="true">T</div>
+        </div>
+
+        <h2 class="section-title">Your Overview</h2>
+
+        <div class="stats">
+          <div class="stat-card">
+            <span>Quizzes Completed</span>
+            <strong id="completedCount">0</strong>
+            <small>Total submitted quizzes</small>
+          </div>
+          <div class="stat-card">
+            <span>Average Score</span>
+            <strong id="averageScore">0%</strong>
+            <small>Across all attempts</small>
+          </div>
+          <div class="stat-card">
+            <span>Best Score</span>
+            <strong id="bestScore">0%</strong>
+            <small>Your highest result</small>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2 class="section-title">Quiz Center</h2>
+            <p>Practice Computers, Coding, and Robotics.</p>
+          </div>
+        </div>
+        <br />
+        <div class="feature-card">
+          <div class="feature-icon">Q</div>
+          <div class="feature-content">
+            <h3>Ready for a challenge?</h3>
+            <p>
+              Choose a subject and complete a short quiz. Get your results
+              immediately.
+            </p>
+          </div>
+          <button class="primary-button" id="openQuiz" data-page="quiz">
+            See Available Quizzes
+          </button>
+        </div>
+
+        <h2 class="section-title activity-title">Recent Activity</h2>
+        <div class="activity-card" id="recentActivity">
+          No quizzes completed yet.
+        </div>
+      </section>
+
+      <section id="quiz" class="page">
+        <header class="page-header">
+          <h1>Quiz Center</h1>
+          <p>Choose a subject and test your knowledge.</p>
+        </header>
+
+        <div id="quizSelection">
+          <div class="quiz-banner">
+            <span class="eyebrow">STUDENT QUIZZES</span>
+            <h2>Learn. Practice. Improve.</h2>
+            <p>Choose a subject to begin your quiz.</p>
+          </div>
+
+          <h2 class="section-title">Available Quizzes</h2>
+
+          <div class="subject-grid">
+            <article class="subject-card">
+              <div class="subject-icon">PC</div>
+              <h3>Computers</h3>
+              <p>Computer hardware, software, and digital skills.</p>
+              <button class="primary-button" data-subject="computers">
+                Start Quiz
+              </button>
+            </article>
+
+            <article class="subject-card">
+              <div class="subject-icon">JS</div>
+              <h3>Coding</h3>
+              <p>Programming fundamentals and computational thinking.</p>
+              <button class="primary-button" data-subject="coding">
+                Start Quiz
+              </button>
+            </article>
+
+            <article class="subject-card">
+              <div class="subject-icon">RB</div>
+              <h3>Robotics</h3>
+              <p>Robots, sensors, motors, and basic engineering.</p>
+              <button class="primary-button" data-subject="robotics">
+                Start Quiz
+              </button>
+            </article>
+          </div>
+        </div>
+
+        <div id="quizPlayer" class="hidden">
+          <button class="back-button" id="backToQuizzes">
+            Back to quizzes
+          </button>
+
+          <div class="quiz-player-card">
+            <div class="quiz-top">
+              <div>
+                <span class="eyebrow blue">TECHWISE JAM QUIZ</span>
+                <h2 id="quizTitle">Quiz</h2>
+              </div>
+              <span id="questionCounter">Question 1 of 5</span>
+            </div>
+
+            <div class="progress-track">
+              <div id="quizProgress"></div>
+            </div>
+
+            <h3 id="questionText"></h3>
+            <div id="answerOptions" class="answer-options"></div>
+
+            <div class="quiz-actions">
+              <button class="secondary-button" id="previousQuestion">
+                Previous
+              </button>
+              <button class="primary-button" id="nextQuestion">
+                Next Question
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="quizResults" class="hidden">
+          <div class="result-card">
+            <span class="eyebrow blue">QUIZ COMPLETED</span>
+            <h2>Your Results</h2>
+            <div class="result-score" id="resultScore">0%</div>
+            <h3 id="resultMessage"></h3>
+            <p id="resultDetails"></p>
+            <div id="answerReview"></div>
+            <button class="primary-button" id="finishQuiz">
+              Back to Quiz Center
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
