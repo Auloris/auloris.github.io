@@ -36,7 +36,7 @@ form.addEventListener("submit", async (event) => {
 
   error.textContent = "";
 
-  const username = usernameInput.value.trim();
+  const username = usernameInput.value;
   const password = passwordInput.value;
 
   if (!username || !password) {
