@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff Dashhub | Auloris</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="staff.css" />
+  <script src="staff.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">A</div>
+      <span>Aulor<strong>is</strong></span>
+    </div>
+
+    <div class="school-name">Staff Dashhub</div>
+
+    <nav>
+      <button class="nav-item active" data-page="overview">
+        Overview
+      </button>
+      <button class="nav-item" data-page="quiz">
+        Quizzes
+      </button>
+      <button class="nav-item" data-page="workbooks">
+        Workbooks
+      </button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <p>Staff Portal</p>
+      <a href="login.html">Sign out</a>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="page active">
+      <header class="page-header">
+        <h1>Staff Overview</h1>
+        <p>Your teaching and learning workspace.</p>
+      </header>
+
+      <div class="hero">
+        <div>
+          <span class="eyebrow">AULORIS STAFF PORTAL</span>
+          <h2>Welcome back, <span id="staffName">Staff</span>!</h2>
+          <p>
+            Access educational resources, explore quizzes,
+            and continue building your knowledge.
+          </p>
+          <button class="hero-button" data-go="workbooks">
+            Browse Workbooks
+          </button>
+        </div>
+        <div class="hero-decoration" aria-hidden="true">A</div>
+      </div>
+
+      <h2 class="section-title">Your Overview</h2>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Quizzes Completed</span>
+          <strong id="completedCount">0</strong>
+          <small>Total submitted quizzes</small>
+        </div>
+
+        <div class="stat-card">
+          <span>Average Score</span>
+          <strong id="averageScore">0%</strong>
+          <small>Across all attempts</small>
+        </div>
+
+        <div class="stat-card">
+          <span>Best Score</span>
+          <strong id="bestScore">0%</strong>
+          <small>Your highest result</small>
+        </div>
+      </div>
+
+      <h2 class="section-title">Quick Access</h2>
+
+      <div class="quick-grid">
+        <article class="quick-card">
+          <div class="quick-icon">Q</div>
+          <h3>Quiz Center</h3>
+          <p>
+            Practice Computers, Coding, and Robotics
+            with interactive quizzes.
+          </p>
+          <button class="primary-button" data-go="quiz">
+            Explore Quizzes
+          </button>
+        </article>
+
+        <article class="quick-card">
+          <div class="quick-icon">PDF</div>
+          <h3>Workbook Collection</h3>
+          <p>
+            Browse and download educational PDF
+            workbooks for classroom use.
+          </p>
+          <button class="primary-button" data-go="workbooks">
+            View Workbooks
+          </button>
+        </article>
+      </div>
+
+      <h2 class="section-title">Recent Activity</h2>
+      <div class="activity-card" id="recentActivity">
+        No quizzes completed yet.
+      </div>
+    </section>
+
+    <!-- QUIZZES -->
+    <section id="quiz" class="page">
+      <header class="page-header">
+        <h1>Quiz Center</h1>
+        <p>Choose a subject and test your knowledge.</p>
+      </header>
+
+      <div id="quizSelection">
+        <div class="quiz-banner">
+          <span class="eyebrow">STAFF QUIZZES</span>
+          <h2>Learn. Practice. Improve.</h2>
+          <p>Choose a subject to begin your quiz.</p>
+        </div>
+
+        <h2 class="section-title">Available Quizzes</h2>
+
+        <div class="subject-grid">
+          <article class="subject-card">
+            <div class="subject-icon">PC</div>
+            <h3>Computers</h3>
+            <p>Computer hardware, software, and digital skills.</p>
+            <button class="primary-button" data-subject="computers">
+              Start Quiz
+            </button>
+          </article>
+
+          <article class="subject-card">
+            <div class="subject-icon">JS</div>
+            <h3>Coding</h3>
+            <p>Programming fundamentals and computational thinking.</p>
+            <button class="primary-button" data-subject="coding">
+              Start Quiz
+            </button>
+          </article>
+
+          <article class="subject-card">
+            <div class="subject-icon">RB</div>
+            <h3>Robotics</h3>
+            <p>Robots, sensors, motors, and basic engineering.</p>
+            <button class="primary-button" data-subject="robotics">
+              Start Quiz
+            </button>
+          </article>
+        </div>
+      </div>
+
+      <div id="quizPlayer" class="hidden">
+        <button class="back-button" id="backToQuizzes">
+          Back to quizzes
+        </button>
+
+        <div class="quiz-player-card">
+          <div class="quiz-top">
+            <div>
+              <span class="eyebrow blue">AULORIS QUIZ</span>
+              <h2 id="quizTitle">Quiz</h2>
+            </div>
+            <span id="questionCounter">Question 1 of 5</span>
+          </div>
+
+          <div class="progress-track">
+            <div id="quizProgress"></div>
+          </div>
+
+          <h3 id="questionText"></h3>
+          <div id="answerOptions" class="answer-options"></div>
+
+          <div class="quiz-actions">
+            <button class="secondary-button" id="previousQuestion">
+              Previous
+            </button>
+            <button class="primary-button" id="nextQuestion">
+              Next Question
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="quizResults" class="hidden">
+        <div class="result-card">
+          <span class="eyebrow blue">QUIZ COMPLETED</span>
+          <h2>Your Results</h2>
+          <div class="result-score" id="resultScore">0%</div>
+          <h3 id="resultMessage"></h3>
+          <p id="resultDetails"></p>
+          <div id="answerReview"></div>
+          <button class="primary-button" id="finishQuiz">
+            Back to Quiz Center
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKBOOKS -->
+    <section id="workbooks" class="page">
+      <header class="page-header">
+        <h1>Workbook Collection</h1>
+        <p>Access and download educational resources.</p>
+      </header>
+
+      <div class="hero">
+        <div>
+          <span class="eyebrow">STAFF RESOURCES</span>
+          <h2>Everything you need to teach.</h2>
+          <p>
+            Browse workbooks across subjects and primary levels.
+            Download resources for your classroom.
+          </p>
+        </div>
+        <div class="hero-decoration pdf-art" aria-hidden="true">
+          PDF
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2 class="section-title">All Workbooks</h2>
+          <p id="resultCount">Loading workbooks...</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <input
+          type="search"
+          id="search"
+          placeholder="Search workbooks..."
+          aria-label="Search workbooks"
+        />
+
+        <select id="subjectFilter" aria-label="Filter by subject">
+          <option value="all">All Subjects</option>
+        </select>
+
+        <select id="levelFilter" aria-label="Filter by level">
+          <option value="all">All Levels</option>
+        </select>
+      </div>
+
+      <div class="workbook-grid" id="workbookGrid"></div>
+
+      <p id="emptyState" class="empty" hidden>
+        No workbooks found.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
