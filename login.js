@@ -2,7 +2,7 @@ const form = document.getElementById("loginForm");
 const error = document.getElementById("error");
 const toggle = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");
-const usernameInput = document.getElementById("username").value.trim();
+const usernameInput = document.getElementById("username");
 
 // Convert a password into a SHA-256 hash
 async function hashPassword(password) {
