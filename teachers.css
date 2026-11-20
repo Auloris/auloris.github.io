@@ -12,7 +12,14 @@
 * {
   box-sizing: border-box;
 }
+/* Hide scrollbars but allow scrolling */
+html {
+  scrollbar-width: none; /* Firefox */
+}
 
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
 body {
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;

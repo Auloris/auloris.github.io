@@ -36,7 +36,7 @@ form.addEventListener("submit", async (event) => {
 
   error.textContent = "";
 
-  const username = usernameInput.value;
+  const username = usernameInput.value.trim();
   const password = passwordInput.value;
 
   if (!username || !password) {
@@ -61,7 +61,38 @@ form.addEventListener("submit", async (event) => {
       throw new Error("Failed to load members.json");
     }
 
-    const data = await response.json();
+    const data = {
+      members: [
+        {
+          username: "admin",
+          passwordHash:
+            "ec423cd0a99605b8d61cfc915245234015a9d8c46a09c89fa26777190b2d0383",
+          role: "staff",
+          school: "null",
+        },
+        {
+          username: "ms.yvonne",
+          passwordHash:
+            "ffbbd938ea941b7dc2c8f3235d60dafb05da4acec05bd855d630dfb048a1b9e4",
+          role: "teacher",
+          school: "Anglo Singapore",
+        },
+        {
+          username: "mr.danial",
+          passwordHash:
+            "e55ca4a2397eeb5d3fa1939cc0aedbb439cddb72f2e36744a44463ff2d041116",
+          role: "teacher",
+          school: "Anglo Singapore",
+        },
+        {
+          username: "test.acc",
+          passwordHash:
+            "ffbbd938ea941b7dc2c8f3235d60dafb05da4acec05bd855d630dfb048a1b9e4",
+          role: "student",
+          school: "test",
+        },
+      ],
+    };
 
     if (!Array.isArray(data.members)) {
       throw new Error("Invalid members.json structure");
@@ -86,12 +117,12 @@ form.addEventListener("submit", async (event) => {
     }
 
     // Dashboard destinations
-    function decideCode() {
-        
-    }
-    const panel = "Student%20Dashboard%20Dashub%20Olcafactrest";
+    const panel = "Student Dashboard Dashub Olcafactrest";
+
     const destinations = {
-      student: `student.html?username=${encodeURIComponent(username)}?panel=${panel}`,
+      student:
+        `student.html?username=${encodeURIComponent(username)}` +
+        `&panel=${encodeURIComponent(panel)}`,
       teacher: "teacher.html",
       staff: "dashHub.htm",
     };
@@ -103,8 +134,14 @@ form.addEventListener("submit", async (event) => {
       return;
     }
 
+    // Save login session after successful verification
+    sessionStorage.setItem("isLoggedIn", "true");
+    sessionStorage.setItem("username", member.username);
+    sessionStorage.setItem("role", member.role);
+    sessionStorage.setItem("loginTime", Date.now().toString());
+
     // Redirect to the correct dashboard
-    window.location.assign(destination);
+    window.location.replace(destination);
   } catch (err) {
     console.error("Login error:", err);
 

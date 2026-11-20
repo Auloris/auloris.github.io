@@ -13,9 +13,13 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbars but allow scrolling */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 95px;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
 }
 
 body {
@@ -55,7 +59,13 @@ button {
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
+iframe {
+  scrollbar-width: none; /* Firefox */
+}
 
+iframe::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
 .navbar {
   min-height: 84px;
   display: flex;
