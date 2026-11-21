@@ -32,6 +32,9 @@ function initializeDashboard() {
     "Computer Science": "#5264d8",
     Coding: "#6347bd",
     Robotics: "#178baf",
+    Math: "#0000ff",
+    Science: "#1a7000",
+    Chinese: "#9e3500",
   };
 
   function createCard(book) {
@@ -210,6 +213,232 @@ function initializeDashboard() {
             subject: "Robotics",
             level: "Level 6",
             file: "lev6rob.pdf",
+          },
+          {
+            title: "Level 1A Chinese",
+            subject: "Chinese",
+            level: "Level 1",
+            file: "chn1a.pdf",
+          },
+          {
+            title: "Level 1B Chinese",
+            subject: "Chinese",
+            level: "Level 1",
+            file: "chn1b.pdf",
+          },
+          {
+            title: "Level 2A Chinese",
+            subject: "Chinese",
+            level: "Level 2",
+            file: "chn2a.pdf",
+          },
+          {
+            title: "Level 2B Chinese",
+            subject: "Chinese",
+            level: "Level 2",
+            file: "chn2b.pdf",
+          },
+          //
+          {
+            title: "Level 3A Chinese",
+            subject: "Chinese",
+            level: "Level 3",
+            file: "chn3a.pdf",
+          },
+          {
+            title: "Level 3B Chinese",
+            subject: "Chinese",
+            level: "Level 3",
+            file: "chn3b.pdf",
+          },
+          {
+            title: "Level 4A Chinese",
+            subject: "Chinese",
+            level: "Level 4",
+            file: "chn4a.pdf",
+          },
+          {
+            title: "Level 4B Chinese",
+            subject: "Chinese",
+            level: "Level 4",
+            file: "chn4b.pdf",
+          },
+          //
+          {
+            title: "Level 5A Chinese",
+            subject: "Chinese",
+            level: "Level 5",
+            file: "chn5a.pdf",
+          },
+          {
+            title: "Level 5B Chinese",
+            subject: "Chinese",
+            level: "Level 5",
+            file: "chn5b.pdf",
+          },
+          {
+            title: "Level 6A Chinese",
+            subject: "Chinese",
+            level: "Level 6",
+            file: "chn6a.pdf",
+          },
+          {
+            title: "Level 6B Chinese",
+            subject: "Chinese",
+            level: "Level 6",
+            file: "chn6b.pdf",
+          },
+          // Next sub
+          // next sub gtag
+          {
+            title: "Level 1A Science",
+            subject: "Science",
+            level: "Level 1",
+            file: "sc1a.pdf",
+          },
+          {
+            title: "Level 1B Science",
+            subject: "Science",
+            level: "Level 1",
+            file: "sc1b.pdf",
+          },
+          {
+            title: "Level 2A Science",
+            subject: "Science",
+            level: "Level 2",
+            file: "sc2a.pdf",
+          },
+          {
+            title: "Level 2B Science",
+            subject: "Science",
+            level: "Level 2",
+            file: "sc2b.pdf",
+          },
+          //
+          {
+            title: "Level 3A Science",
+            subject: "Science",
+            level: "Level 3",
+            file: "sc3a.pdf",
+          },
+          {
+            title: "Level 3B Science",
+            subject: "Science",
+            level: "Level 3",
+            file: "sc3b.pdf",
+          },
+          {
+            title: "Level 4A Science",
+            subject: "Science",
+            level: "Level 4",
+            file: "sc4a.pdf",
+          },
+          {
+            title: "Level 4B Science",
+            subject: "Science",
+            level: "Level 4",
+            file: "sc4b.pdf",
+          },
+          //
+          {
+            title: "Level 5A Science",
+            subject: "Science",
+            level: "Level 5",
+            file: "sc5a.pdf",
+          },
+          {
+            title: "Level 5B Science",
+            subject: "Science",
+            level: "Level 5",
+            file: "sc5b.pdf",
+          },
+          {
+            title: "Level 6A Science",
+            subject: "Science",
+            level: "Level 6",
+            file: "sc6a.pdf",
+          },
+          {
+            title: "Level 6B Science",
+            subject: "Science",
+            level: "Level 6",
+            file: "sc6b.pdf",
+          },
+          // Next sub
+          // next sub gtag
+          {
+            title: "Level 1A Math",
+            subject: "Mathematics",
+            level: "Level 1",
+            file: "m1a.pdf",
+          },
+          {
+            title: "Level 1B Math",
+            subject: "Mathematics",
+            level: "Level 1",
+            file: "m1b.pdf",
+          },
+          {
+            title: "Level 2A Math",
+            subject: "Mathematics",
+            level: "Level 2",
+            file: "m2a.pdf",
+          },
+          {
+            title: "Level 2B Math",
+            subject: "Mathematics",
+            level: "Level 2",
+            file: "m2b.pdf",
+          },
+          //
+          {
+            title: "Level 3A Math",
+            subject: "Mathematics",
+            level: "Level 3",
+            file: "m3a.pdf",
+          },
+          {
+            title: "Level 3B Math",
+            subject: "Mathematics",
+            level: "Level 3",
+            file: "m3b.pdf",
+          },
+          {
+            title: "Level 4A Math",
+            subject: "Mathematics",
+            level: "Level 4",
+            file: "m4a.pdf",
+          },
+          {
+            title: "Level 4B Math",
+            subject: "Mathematics",
+            level: "Level 4",
+            file: "m4b.pdf",
+          },
+          //
+          {
+            title: "Level 5A Math",
+            subject: "Mathematics",
+            level: "Level 5",
+            file: "m5a.pdf",
+          },
+          {
+            title: "Level 5B Math",
+            subject: "Mathematics",
+            level: "Level 5",
+            file: "m5b.pdf",
+          },
+          {
+            title: "Level 6A Math",
+            subject: "Mathematics",
+            level: "Level 6",
+            file: "m6a.pdf",
+          },
+          {
+            title: "Level 6B Math",
+            subject: "Mathematics",
+            level: "Level 6",
+            file: "m6b.pdf",
           },
         ],
       };

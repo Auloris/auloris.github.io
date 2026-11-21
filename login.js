@@ -84,13 +84,6 @@ form.addEventListener("submit", async (event) => {
           role: "teacher",
           school: "Anglo Singapore",
         },
-        {
-          username: "test.acc",
-          passwordHash:
-            "ffbbd938ea941b7dc2c8f3235d60dafb05da4acec05bd855d630dfb048a1b9e4",
-          role: "student",
-          school: "test",
-        },
       ],
     };
 
