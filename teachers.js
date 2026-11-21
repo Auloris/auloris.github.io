@@ -47,7 +47,7 @@ function initializeDashboard() {
     cover.style.setProperty("--cover-color", colors[book.subject] || "#2468ed");
 
     const coverLabel = document.createElement("span");
-    coverLabel.textContent = `TECHWISE JAM • ${book.level}`;
+    coverLabel.textContent = `Auloris • ${book.level}`;
 
     const coverTitle = document.createElement("strong");
     coverTitle.textContent = book.subject;
