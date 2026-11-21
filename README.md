@@ -1,6 +1,16 @@
 # Auloris
 
 **Where Learning Meets Possibility.**
+> [!IMPORTANT]
+> **Announcement: Student Dashboard Discontinued**
+>
+> The Auloris Student Dashboard has been discontinued.
+> Auloris is now a teacher-only platform offering resources
+> for Mathematics, Science, Chinese, Computer Science,
+> and Robotics.
+>
+> Schools can continue to register to provide their
+> teachers with access to Auloris.
 
 Auloris is a modern educational platform designed to make learning simpler, more accessible, and engaging for students, teachers, and educational organizations.
 
@@ -14,7 +24,7 @@ With a clean, intuitive interface, Auloris makes educational tools easy to acces
 
 ## Our Features
 
-### Student Dashboard
+### Student Dashboard (Discontinued)
 
 A personalized learning environment where students can complete interactive quizzes, review their answers, track their scores, and monitor their learning progress.
 
