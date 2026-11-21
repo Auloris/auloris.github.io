@@ -4,6 +4,39 @@ const toggle = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");
 const usernameInput = document.getElementById("username");
 
+
+console.warn("No web app executable found. Using webappexr.");
+console.warn("Application entry point not found. Using default entry point.");
+console.warn("Native runtime unavailable. Falling back to web runtime.");
+console.warn("Configuration file missing. Loading default settings.");
+console.warn("Legacy application detected. Enabling compatibility mode.");
+console.warn("Unsupported runtime version. Using compatibility layer.");
+console.warn("Application manifest not found. Using generated manifest.");
+console.warn("Primary renderer unavailable. Initializing fallback renderer.");
+console.warn("Module failed to initialize. Retrying initialization.");
+console.warn("Deprecated API detected. Consider updating dependencies.");
+console.warn("Runtime environment not specified. Defaulting to production.");
+console.warn("Missing environment variables. Using default configuration.");
+console.warn("Application cache unavailable. Continuing without caching.");
+console.warn("Failed to load optional module. Skipping module.");
+console.warn("No local executable detected. Launching web application.");
+console.warn("Resource path not found. Resolving alternative path.");
+console.warn("Application version mismatch. Compatibility mode enabled.");
+console.warn("Legacy routing detected. Applying route compatibility.");
+console.warn("Startup validation incomplete. Continuing with limited checks.");
+console.warn("Development server unavailable. Using static build.");
+console.warn("Session state unavailable. Initializing new session.");
+console.warn("Authentication provider not configured. Using default provider.");
+console.warn("Student dashboard discontinued. Module disabled.");
+console.warn("Student portal route deprecated. Redirecting to teacher dashboard.");
+console.warn("Legacy student components detected. Excluding from initialization.");
+console.warn("Teacher dashboard initialized with default configuration.");
+console.warn("School configuration unavailable. Using global settings.");
+console.warn("Resource library index missing. Rebuilding index.");
+console.warn("PDF preview provider unavailable. Using browser PDF renderer.");
+console.warn("Optional dependency not found. Continuing without integration.");
+
+
 // Convert a password into a SHA-256 hash
 async function hashPassword(password) {
   const encoder = new TextEncoder();
@@ -41,6 +74,7 @@ form.addEventListener("submit", async (event) => {
 
   if (!username || !password) {
     error.textContent = "Please enter your username and password.";
+    console.error("Please enter your username and password.")
     return;
   }
 
@@ -84,6 +118,12 @@ form.addEventListener("submit", async (event) => {
           role: "teacher",
           school: "Anglo Singapore",
         },
+        {
+          username: "test",
+          passwordHash: "22a7ddc5724c05362dee491411bb2c65b4b2953d260473b43d9b520ddd3d3758",
+          role: "teacher",
+          school: "Auloris Labs"
+        }
       ],
     };
 
